@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: #fdfdff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-color: #642ca9;
+    height: 180px;
+}
+.usuario{
+    height: 45px;
+    float: right;
+    padding: 0px 30px 0px 0;
+    margin-bottom: 0px;
+    margin-top: -80px;
+    font-size: 20px;
+}
+#login{
+    padding-top: 10px;
+    margin-right: 45px;
+}
+#input{
+    float: right;
+    margin: -66px 30% 0 0;
+    width: 35%;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+}
+#input:focus{
+    outline: none;
+}
+#principal{
+    width: 100%;
+}
+#logo{
+    width: 180px;
+    padding: 10px;
+}
+.img{
+    height: 250px;
+    margin-left: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.322);
+}
+.link{ 
+    padding: 15px 40px 10px 70px;
+    margin: 0 1%;
+    font-size: 20px;
+    background-color: #05b3ba;
+    border-radius: 20px;
+    float: right;
+}
+.link:hover {
+    background: #fdfdff;
+    color: #05b3ba;
+    border-radius: 20px;
+    transition: 0.7s;
+    font-weight: bolder;
+    padding: 20px 45px 15px 70px;
+}
+nav{
+    padding: 20px 135px;
+}
+#one, #three{
+    float: right;
+    margin: 3px -70px;
+}
+#two{
+    float: right;
+    margin: 8px -60px;
+}
+#four, #five{
+    float: right;
+    margin: 10px -70px;
+}
+a{
+    color: #fdfdff;
+    text-decoration: none;
+    font-weight: bold;
+}  
+article{
+    background-color: #fdfdff;
+    height: 1000px;
+    padding: 15px;
+    margin-top: -5px;
+}
+.a{
+    padding: 30px 40px ;
+    text-align: justify;
+    line-height: 25px;
+}
+.a>p, h1{
+    width: 60%;
+    padding: 20px;
+}
+#b{
+    float: right;
+    margin: -260px 0;
+}
+#c{
+    float: right;
+    margin: -40px 60px -20px -20px;
+}
+.d{
+    float: right;
+}
+.d>p{
+    padding: -100px 0;
+}
+h1{
+    font-weight: bold;
+    font-size: 40px;
+    color: #642ca9;
+}
+p{
+    color: #3c1b62;
+}
+#unidade>h1, #unidade>p{
+    width: 100%;
+    padding: 10px 0 10px 0;
+    color: #fdfdff;    
+    text-align: center;
+}
+#unidades{
+    padding: 30px 0;
+    background-color: #642ca9;
+    justify-content: center;
+    display: flex;
+}
+#fot{
+    width: 100%;
+}
+
+/*Página de unidades*/
+.cidades{
+    margin: 15px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #fdfdff;
+    height: 480px;
+}
+.informacoes{
+    padding: 10px;
+    width: 40%;
+    line-height: 25px;
+    text-align: justify;
+}
+.imagens{
+    padding: 10px;
+    width: 40%;
+    border-radius: 20px;
+    float: right;
+    margin-top: -410px;
+    margin-right: 5%;
+}
+.z{
+    padding: 15px 5px;
+}
+.x{
+    width: 100%;
+    text-align: center;
+    color: #fdfdff;
+}
+main{
+    background-color: #05b3ba;
+    width: 100%;
+}
+#sla{
+    background-color: #642ca9;
+    padding-top: 50px;
+}
+#main{
+    padding: 40px 0;
+}
+h2{
+    color: #05b3ba;
+}
+.links{
+    color: #642ca9;
+    font-weight: bold;
+}

@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+}
+header{
+    background-color: #642ca9;
+    height: 180px;
+}
+#input{
+    float: right;
+    margin: -66px 30% 0 0;
+    width: 35%;
+    height: 30px;
+    border-radius: 20px;
+    border: 0;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+}
+#principal{
+    width: 100%;
+}
+#logo{
+    width: 180px;
+    padding: 10px;
+}
+.link{ 
+    padding: 15px 40px 10px 70px;
+    margin: 0 1%;
+    font-size: 20px;
+    background-color: #05b3ba;
+    border-radius: 20px;
+    float: right;
+}
+nav{
+    padding: 20px 135px;
+}
+#one, #three{
+    float: right;
+    margin: 3px -70px;
+}
+#two{
+    float: right;
+    margin: 8px -60px;
+}
+#four, #five{
+    float: right;
+    margin: 10px -70px;
+}
+a{
+    color: #fdfdff;
+    text-decoration: none;
+    font-weight: bold;
+}
+#si{
+    background-color: #642ca9;
+}
+#article{
+    background-color: #05b3ba;
+    text-align: center;
+    line-height: 40px;
+    color: #fdfdff;
+    padding: 50px 0;
+}
+#cadastro{
+    text-align: center;
+    line-height: 40px;
+    padding: 60px 10px;
+    color: #fdfdff;
+}
+.links{
+    color: #642ca9;
+    font-weight: bold;
+}
+#fot{
+    width: 100%;
+    padding-top: 50px;
+    background-color: #642ca9;
+}
+.negrito{
+    font-weight: bold;
+    font-size: 20px;
+}
+.link:hover {
+    background: #fdfdff;
+    color: #05b3ba;
+    border-radius: 20px;
+    transition: 0.7s;
+    font-weight: bolder;
+    padding: 20px 45px 15px 70px;
+}
+p{
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGENS DINAMICAS</title>
+</head>
+<body>
+    <h1>IMAGENS DINÂMICAS</h1>
+    <h2>Como fazer para que uma imagem se adapte a diferentes tamanhos de tela?</h2>
+    <p>1º Pegue uma imagem e a formate-a com diferentes tamanhos (uma idéia: 300px, 700px, 1000px)</p>
+
+    <!--<picture>
+        <source media="(max-width: 750px)" srcset="imagens/fotop.png" type="image/png"> 
+        "Se a tela estiver em até 750px a imagem vai ser a média, caso for menor, a imagem será a pequena"
+
+        <source media="(max-width: 1050px)" srcset="imagens/fotom.png" type="image/png">
+        "Se a tela estiver em até 1050px a imagem vai ser a grande, caso for menor, a imagem será a média"
+
+        <img src="imagens/fotog.png" alt="imagemm">
+        "Começa com a imagem grande"
+    </picture>-->
+    
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/fotop.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/fotom.png" type="image/png">
+        <img src="imagens/fotog.png" alt="imagemm">
+    </picture>
+</body>
+</html>

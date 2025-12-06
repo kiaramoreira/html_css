@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÍDIAS</title>
+</head>
+<body>
+    <h1>Reproduzindo audio</h1>
+    <p>Exemplo 1</p>
+    <audio src="audio.mp3" controls autoplay></audio>
+    <!--Forma mais simples de colocar audio, porém pode não rodar, dependendo do carregador>-->
+
+    <p>Exemplo 2</p>
+    <audio  preload="metadata" controls autoplay loop>
+        <source src="audio.mp3" type="audio/mpeg">
+        <source src="audio.ogg" type="audio/ogg">
+        <source src="audio.wav" type="audio/wav">
+    </audio>
+    <!--Aqui, da pra inserir outros formatos de audio: mp3, ogg e wav
+    A ordem importa, é a ordem de tentativa, então primeiro ele vai tentar o mp3, se não for, ele vai tentar o ogg, e depois o wav. Não use wav, pois é pesadissimo.
+    
+    preload: Indica se o audio será pré carregado ou não.
+        auto :(padrão)= vai carregar o arquivo de audio inteiro assim q a página for carregada, mesmo que o usuario nunca aperte o play, não é bom.
+        metadata = vai carregar as informações sobre o arquivo (tamanho, tempo, informações de direitos etc)
+        none = não vai carregar absolutamente nada até que o usuário clique no play, ou um script inicie.
+
+    loop: Quando acabar o audio, ele recomeça.
+    controls: apresenta o play na tela.
+    autoplay: Vai iniciar o audio assim que a página for carregada.-->
+
+    <h1>Reproduzinho vídeos</h1>
+    <h2>Hospedagem local</h2>
+    <p>Este vídeo está hospedado no meu próprio servidor</p>
+    <p>Exemplo 1</p>
+    <video src="video.mp4" width="500" controls></video>
+
+    <p>Exemplo 2</p>
+    <video width="500" poster="capa.jpg" controls>
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.m4v.m4v" type="video/m4v">
+        <source src="video.ovg.ogv" type="video/ogv">
+    </video>
+
+    <!--APP: HandBrake, tem q baixar, ele vai ler o arquivo original, decodificar para um formato que seja especial para usar na web e vai gerar um arquivo muito menor
+    
+    videos é 1080p no máximo, evitar hospedar localmente
+    ter midias em diferentes formatos, pois nem todos os navegadores carregam, gera um grande custo.
+    
+    poster: Coloca uma imagem como capa do vídeo-->
+
+    <h2>Hospedagem externa</h2>
+    <p>este vídeo está em outro servidor</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y?si=cppP7LwVFJFg0cZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <!--Video externo do youtube
+    Vimeo: site pra hospedar videos externamnete, igual o youtube só que é possivel deixar um vídeo privado, ninguem vai ver, pago-->
+</body>
+</html>

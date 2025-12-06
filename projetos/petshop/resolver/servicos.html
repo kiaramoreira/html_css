@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+    <link rel="stylesheet" href="servicos.css">
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+        }
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .tablink {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 25%;
+        }
+
+        .tablink:hover {
+        background-color: #777;
+        }
+
+        .tabcontent {
+            padding: 10px;
+        }
+
+        .b{
+            width: 100%;
+        }
+
+        #London {background-color:rgb(140, 195, 247);}
+        #Paris {background-color:rgb(216, 63, 63);}
+        #Tokyo {background-color:orange;}
+        #Oslo {background-color:rgb(71, 201, 119);}
+    </style>
+</head>
+<body>
+    <div id="London" class="tabcontent">
+        <img src="imagens/banho/ft1.jpg" alt="a" class="b">
+    </div>
+
+    <div id="Paris" class="tabcontent">
+        <img src="imagens/hotel/ft1.png" alt="a" class="b">
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+        <img src="imagens/taxi/ft1.jpg" alt="a" class="b">
+    </div>
+
+    <div id="Oslo" class="tabcontent" class="a">
+        <img src="imagens/passeio/ft1.jpg" alt="a" class="b">
+    </div>
+
+    <button class="tablink" onclick="openCity('London', this, 'rgb(140, 195, 247)')" id="defaultOpen">Banho e Tosa</button>
+
+    <a href="hotel.html"><button class="tablink" onclick="openCity('Paris', this, 'rgb(216, 63, 63)')">Hotel Pet</button></a>
+
+    <a href="taxi.html"><button class="tablink" onclick="openCity('Tokyo', this, 'orange')">Taxi Pet</button></a>
+
+    <a href="passeio.html"><button class="tablink" onclick="openCity('Oslo', this, 'rgb(71, 201, 119)')">Passeio</button></a>
+
+    <script>
+        function openCity(cityName,elmnt,color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(cityName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+    document.getElementById("defaultOpen").click();
+    </script>
+
+    <article>
+        <div class="a">
+                <h1 class="d">História da empresa</h1>
+
+                <p class="d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos necessitatibus blanditiis repellat! Incidunt amet sapiente optio molestias. Debitis atque, asperiores error dolore dolorem eos impedit cupiditate unde. Saepe, veritatis qui.Lorem ipsum dolor sit amet consectetur adipisicing elit. At consectetur nam perferendis atque impedit obcaecati porro dolor ipsum deleniti, molestiae incidunt nobis laudantium cupiditate facilis amet assumenda asperiores, aliquid dolorum!Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium soluta ducimus dolore veritatis voluptatum dicta aliquid pariatur beatae expedita possimus ipsa nostrum, alias temporibus dignissimos repellendus quos animi, aliquam sapiente.</p>
+                <img src="imagens/inicial/historia.jpg" class="img">
+            </div>
+
+            <div class="a">
+                <h1>Isabel Oliveira</h1>
+                <img src="imagens/inicial/isabel.png" class="img" id="c">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus autem quidem sapiente enim numquam fuga a ipsam tenetur, dolorum aliquam at sequi voluptatum eveniet esse illo nulla! Architecto, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, doloremque. Reprehenderit ipsum, deleniti maiores in illum modi quibusdam itaque aliquam, repellat aspernatur asperiores velit tempora vitae ea doloribus recusandae eos.laboriosam lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus reprehenderit modi iusto, hic illo fugit, dicta quod explicabo voluptas, voluptatibus commodi ex id beatae aperiam suscipit enim quo odit ipsam.</p>
+            </div>
+    </article>
+</body>
+</html>

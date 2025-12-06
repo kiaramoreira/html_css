@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="shortcut icon" href="imagens/inicial/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="inicial.css">
+
+    <style>
+        .container {
+        position: relative;
+        width: 30%;
+        padding: 10px;
+        margin: 10px;
+        }
+
+        #image {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        }
+
+        .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color:#b793e5;
+        }
+
+        .container:hover .overlay {
+        opacity: 1;
+        border-radius: 20px;
+        }
+
+        .text {
+        color: #fdfdff;
+        font-size: 30px;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        }
+</style>
+
+</head>
+<body>
+    <header>
+        <div>
+            <img src="imagens/inicial/logo.png" id="logo">
+        </div>
+        <div>
+            <input type="search" name="pesquisar" placeholder="Pesquisar" id="input">
+        </div>
+        <div>
+            <a href="#"><img src="imagens/inicial/usuario.png" class="usuario"></a>
+            <p class="usuario" id="login"><a href="login.html">Fazer login</a></p>
+        </div>
+        <nav>
+            <a href="contato.html" class="link">CONTATO</a><img src="imagens/inicial/contato.png" alt="" id="one">
+            <a href="unidades.html" class="link">UNIDADES</a><img src="imagens/inicial/unidades.png" alt="" id="two">
+            <a href="banho.html" target="_blank" class="link">SERVIÇOS</a><img src="imagens/inicial/servicos.png" alt="" id="three">
+            <a href="produtos.html" target="_blank" class="link">PRODUTOS</a><img src="imagens/inicial/produtos.png" alt="" id="four">
+            <a href="index.html" class="link">INICIO</a><img src="imagens/inicial/linicio.png" alt="" id="five">
+        </nav>
+    </header>
+
+    <main>
+        <div><img src="imagens/inicial/sim.png" alt="Primeira imagem" id="principal"></div>
+
+        <article>
+            <div class="a">
+                <h1>Sobre nós</h1>
+                <p>Bem vindo ao Petshop da Belinha, aqui nossa história é tecida com 15 anos de dedicação ininterrupta e um amor profundo e incondicional por cada animal de estimação que cruza o nosso caminho. Desde a nossa fundação, somos movidos por uma paixão genuína, que se traduz em oferecer o que há de melhor em carinho, cuidado e produtos de excelência para a vibrante comunidade das cidades de Francisco Morato, Franco da Rocha e Mairiporã. A alma e o coração da nossa empresa é a proprietária, Isabel Oliveira. Com uma dedicação incansável e um olhar atento às necessidades dos bichinhos, Isabel transformou um sonho em realidade: criar um refúgio e um centro de bem-estar onde a saúde, a segurança e a felicidade dos pets fossem, indiscutivelmente, a prioridade máxima.</p>
+                <img src="imagens/inicial/sobreNos.png" alt="" class="img" id="b">
+            </div>
+
+            <div class="a">
+                <h1 class="d">História da empresa</h1>
+
+                <p class="d">A trajetória do Petshop da Belinha começou há 15 anos com a visão de Isabel Oliveira. Em Francisco Morato, ela fundou o negócio com um propósito claro: ser um centro de excelência, oferecendo o melhor em produtos e serviços para garantir a saúde e a felicidade dos pets. Graças ao carinho e à confiança de nossos clientes, expandimos nosso sonho. Hoje, a família Belinha atende em três unidades: Franco da Rocha, Francisco Morato e Mariporã. Nestes 15 anos, evoluímos de uma loja local para uma referência regional. Somos mais do que um petshop; somos uma equipe apaixonada que cuida do seu melhor amigo com o mesmo amor que você. Nossa história é construída diariamente com dedicação, excelência e um compromisso inabalável com o bem-estar animal.</p>
+                <img src="imagens/inicial/historia.jpg" class="img">
+            </div>
+
+            <div class="a">
+                <h1>Isabel Oliveira</h1>
+                <img src="imagens/inicial/isabel.png" class="img" id="c">
+                <p>Por trás do sucesso e do carinho do Petshop da Belinha está a visão e a paixão de sua fundadora e proprietária, Isabel Oliveira. Isabel não é apenas a administradora do nosso negócio; ela é a alma e o coração que impulsiona cada serviço e cada produto que oferecemos. Há 15 anos, ela transformou seu profundo amor pelos animais em um empreendimento dedicado ao bem-estar pet, começando a jornada em Francisco Morato. Com uma dedicação incansável, Isabel Oliveira moldou a Belinha em um refúgio de confiança. Sua filosofia sempre foi clara: cuidar de cada pet como se fosse o seu próprio. Foi sua liderança que garantiu a expansão de nossos serviços de excelência para as unidades de Franco da Rocha e Mairiporã.</p>
+            </div>
+        </article>
+
+        <div id="sla">
+            <div id="unidade">
+                <h1>NOSSAS UNIDADES</h1>
+                <p>Conheça hoje nossa unidade mais proxima de você!</p>
+            </div>
+            <section id="unidades">
+                <div class="container">
+                    <img src="imagens/unidades/morato.jpg" alt="Avatar" id="image">
+                    <div class="overlay">
+                        <div class="text"><a href="unidades.html#morato">Francisco Morato</a></div>
+                    </div>
+                </div>
+    
+                <div class="container" id="franco">
+                    <img src="imagens/unidades/franco.jpg" alt="Avatar" id="image">
+                    <div class="overlay">
+                        <div class="text"><a href="unidades.html#franco">Franco da Rocha</a></div>
+                    </div>
+                </div>
+    
+                <div class="container" id="maripora">
+                    <img src="imagens/unidades/maripora.jpeg" alt="Avatar" id="image">
+                    <div class="overlay">
+                        <div class="text"><a href="unidades.html#maripora">Mariporã</a></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+    <footer>
+        <img src="imagens/inicial/rodape.png" alt="" id="fot">
+    </footer>
+</body>
+</html>

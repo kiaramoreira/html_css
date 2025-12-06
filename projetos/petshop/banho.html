@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços | Banho</title>
+    <link rel="shortcut icon" href="imagens/inicial/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="servicos.css">
+
+    <style>
+    * {box-sizing: border-box;}
+
+        .img-comp-container {
+        position: relative;
+        height: 200px;
+        margin: -180px 50px 0 60%;
+        }
+
+        .img-comp-img {
+        position: absolute;
+        width: auto;
+        height: auto;
+        overflow:hidden;
+        }
+
+        .img-comp-img img {
+        display:block;
+        }
+
+        .img-comp-slider {
+        position: absolute;
+        z-index:9;
+        cursor: ew-resize;
+        width: 40px;
+        height: 40px;
+        background-color: #b793e5;
+        opacity: 0.7;
+        border-radius: 50%;
+        }
+    </style>
+    <script>
+        function initComparisons() {
+        var x, i;
+        x = document.getElementsByClassName("img-comp-overlay");
+        for (i = 0; i < x.length; i++) {
+            compareImages(x[i]);
+        }
+        function compareImages(img) {
+            var slider, img, clicked = 0, w, h;
+            w = img.offsetWidth;
+            h = img.offsetHeight;
+            img.style.width = (w / 2) + "px";
+            slider = document.createElement("DIV");
+            slider.setAttribute("class", "img-comp-slider");
+            img.parentElement.insertBefore(slider, img);
+            slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+            slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+            slider.addEventListener("mousedown", slideReady);
+            window.addEventListener("mouseup", slideFinish);
+            slider.addEventListener("touchstart", slideReady);
+            window.addEventListener("touchend", slideFinish);
+            function slideReady(e) {
+            e.preventDefault();
+            clicked = 1;
+            window.addEventListener("mousemove", slideMove);
+            window.addEventListener("touchmove", slideMove);
+            }
+            function slideFinish() {
+            clicked = 0;
+            }
+            function slideMove(e) {
+            var pos;
+            if (clicked == 0) return false;
+            pos = getCursorPos(e);
+            if (pos < 0) pos = 0;
+            if (pos > w) pos = w;
+            slide(pos);
+            }
+            function getCursorPos(e) {
+            var a, x = 0;
+            e = (e.changedTouches) ? e.changedTouches[0] : e;
+            a = img.getBoundingClientRect();
+            x = e.pageX - a.left;
+            x = x - window.pageXOffset;
+            return x;
+            }
+            function slide(x) {
+            img.style.width = x + "px";
+            slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+            }
+        }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="imagens/banho/ft1.jpg" alt="a" id="principal">
+
+        <nav>
+            <a href="banho.html" class="link">BANHO</a>
+            <a href="tosa.html" class="link">TOSA</a>
+            <a href="passeio.html" class="link">PASSEIO</a>
+            <a href="hotel.html" class="link">HOTEL PET</a>
+            <a href="taxi.html" class="link">TAXI PET</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <div class="a">
+                <h1>Nosso banho</h1>
+                <p>O momento do banho no Petshop da Belinha é mais do que apenas uma limpeza; é um ritual de bem-estar, carinho e higiene fundamental para a saúde do seu pet. Nossa prioridade máxima é garantir o conforto e a segurança, tratando cada animal com atenção individualizada, respeitando seu porte, raça e temperamento. Para isso, utilizamos apenas produtos de qualidade premium, como shampoos e condicionadores hipoalergênicos, específicos para cada tipo de pele e pelo, o que minimiza reações alérgicas e potencializa o brilho e a maciez. O serviço de banho inclui uma higiene completa, que abrange a limpeza delicada de ouvidos, o corte cuidadoso de unhas e, quando necessário, a limpeza de glândulas anais. Após a lavagem, a secagem é rigorosa, e ao final, o toque Belinha: seu pet sai cheiroso, totalmente seco, com um perfume agradável e um acessório charmoso.</p>
+                <img src="imagens/banho/ft2.jpg" alt="" class="img" id="b">
+            </div>
+
+            <div class="a">
+                <h1 class="d">Banhos regulares</h1>
+
+                <p class="d">A importância dos banhos regulares reside na prevenção e na saúde, indo muito além da estética. A limpeza periódica é essencial para remover o acúmulo de sujeira, excesso de oleosidade e poluentes, prevenindo problemas dermatológicos comuns, como coceiras e infecções. É também uma ferramenta fundamental no controle de parasitas, ajudando a proteger seu pet contra pulgas e carrapatos. Por fim, durante o processo de banho, nossos profissionais realizam uma inspeção rápida em busca de qualquer anomalia na pele, garantindo a detecção precoce de possíveis problemas. Manter essa frequência é investir em uma vida mais saudável, alegre e confortável para o seu companheiro. Convidamos você a agendar o próximo banho e proporcionar esse cuidado completo ao seu pet!</p>
+                <img src="imagens/banho/ft3.png" class="img">
+            </div>
+        </article>
+
+        <section id="secao">
+        <div id="lista">
+            <h1 id="titulo">Os Benefícios de Escolher o Petshop da Belinha</h1><br><br>
+            <p>Optar pelo Petshop da Belinha para o banho do seu pet, garante cuidados que vão além da limpeza. Nossa equipe oferece expertise profissional e segurança, tratando seu pet com carinho e técnica apurada para que procedimentos como corte de unhas sejam realizados sem estresse. Utilizamos produtos hipoalergênicos e específicos, que protegem a pele e dão brilho à pelagem. Para você, tutor, é praticidade e conveniência: deixe o trabalho de higiene conosco e desfrute de mais tempo com seu pet, que voltará para casa limpo, cheiroso e saudável, usufruindo de 15 anos de qualidade Belinha.</p>
+        </div>
+            
+        <div class="img-comp-container">
+            <div class="img-comp-img">
+                <img src="imagens/banho/ft44.jpg" width="500" height="500">
+            </div>
+            <div class="img-comp-img img-comp-overlay">
+                <img src="imagens/banho/ft4.jpg" width="500" height="500">
+            </div>
+        </div>
+        <script>
+        initComparisons();
+        </script>
+        </section>
+
+        <section>
+            <img src="imagens/banho/etapas.png" alt="" id="etapas">
+        </section>
+        
+        <section id="imagens">
+            <img src="imagens/banho/ft5.jpg" alt="" class="imagens">
+            <img src="imagens/banho/ft7.jpg" alt="" class="imagens">
+            <img src="imagens/banho/ft6.jpg" alt="" class="imagens">
+        </section>
+        
+    </main>
+   
+    <footer>
+        <img src="imagens/inicial/rodape.png" alt="" id="fot">
+    </footer>
+</body>
+</html>

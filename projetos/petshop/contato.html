@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="shortcut icon" href="imagens/inicial/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="contato.css">
+
+    <style>
+        body {
+            font-size: 17px;
+            background-color: #fdfdff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: -ms-flexbox; /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap; /* IE10 */
+            flex-wrap: wrap;
+            margin: 0 -16px 0 70px;
+            width: 90%;
+        }
+
+        .col-25 {
+            -ms-flex: 25%; /* IE10 */
+            flex: 25%;
+        }
+
+        .col-50 {
+            -ms-flex: 50%; /* IE10 */
+            flex: 50%;
+        }
+
+        .col-75 {
+            -ms-flex: 75%; /* IE10 */
+            flex: 75%;
+        }
+
+        .col-25,
+        .col-50{
+            padding: 0 16px;
+        }
+
+        .container {
+            background-color: #f2f2f2;
+            padding: 30px 20px;
+            border: 1px solid lightgrey;
+            border-radius: 3px;
+        }
+
+        input[type=text] {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        label {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .icon-container {
+            margin-bottom: 20px;
+            padding: 7px 0;
+            font-size: 24px;
+        }
+
+        .btn {
+            background-color: #642ca9;
+            color: white;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            width: 100%;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+        .btn:hover {
+            background-color: #a35df9;
+        }
+
+        hr {
+            border: 1px solid lightgrey;
+        }
+
+        span.price {
+            float: right;
+            color: grey;
+        }
+
+        @media (max-width: 800px) {
+        .row {
+            flex-direction: column-reverse;
+        }
+        .col-25 {
+            margin-bottom: 20px;
+        }
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="index.html"><img src="imagens/inicial/logo.png" id="logo"></a>
+        </div>
+        <div>
+            <input type="search" name="pesquisar" placeholder="Pesquisar" id="input">
+        </div>
+        <nav>
+            <a href="contato.html" class="link">CONTATO</a><img src="imagens/inicial/contato.png" alt="" id="one">
+            <a href="unidades.html" class="link">UNIDADES</a><img src="imagens/inicial/unidades.png" alt="" id="two">
+            <a href="banho.html" class="link">SERVIÇOS</a><img src="imagens/inicial/servicos.png" alt="" id="three">
+            <a href="produtos.html" class="link">PRODUTOS</a><img src="imagens/inicial/produtos.png" alt="" id="four">
+            <a href="index.html" class="link">INICIO</a><img src="imagens/inicial/linicio.png" alt="" id="five">
+        </nav>
+    </header>
+
+    <main>
+        <article id="article">
+            <h1>Contatos</h1>
+            <p>Tem dúvidas sobre um produto, quer agendar um banho e tosa ou solicitar o nosso Taxi Dog? Fale com a gente! Nossa equipe está pronta para atendê-lo com carinho e agilidade. Você pode utilizar o Formulário de Contato disponível no site para enviar sua mensagem a qualquer momento. Se preferir um atendimento rápido e direto, clique nos nossos Links de E-mail ou chame-nos pelo WhatsApp. Estamos ansiosos para cuidar do seu pet e responder todas as suas perguntas!</p></br>    
+
+            <div id="num">
+                    <p class="negrito">Franco da Rocha: 11 9999-9999</p>
+                    <p class="negrito">Francisco Morato: 11 8888-8888</p>
+                    <p class="negrito">Mariporã: 11 7777-7777</p>
+                    <p class="negrito">Whatsapp: <a href="https://wa.me/5511976159061?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!" target="_blank" class="links">Contate-nos</a></p></br>
+                </div>
+                <div>
+                    <p class="negrito">Email:  <a href="mailto:kiaramoreira29@gmail.com" class="links">belinha29@gmail.com</a></p>
+                    <p class="negrito">Instagram:  <a href="https://www.instagram.com/moreira.ky?igsh=bnR2YXZ1eDQ0bmRy" target="_blank" class="links">petshop_belinha</a></p>
+                    <p class="negrito">Facebook:  <a href="https://www.facebook.com/share/14QLQEwQMYx/" target="_blank" class="links">Petshop da Belinha</a></p>
+            </div>           
+            
+        </article>
+        <hr>
+        <section id="si">
+            <div id="cadastro">
+                <h1>Cadastre-se</h1>
+                <p>Faça parte da família Petshop da Belinha! Ao se cadastrar em nosso site, você garante acesso exclusivo a ofertas especiais, descontos em serviços e fica por dentro de todas as novidades em produtos e eventos nas nossas unidades de Francisco Morato, Franco da Rocha e Mairiporã. O cadastro é rápido e simples, e é a melhor forma de estreitar nosso relacionamento para cuidar do seu pet com ainda mais dedicação. Não perca tempo, cadastre-se agora e comece a aproveitar!</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-75">
+                    <div class="container">
+                    <form action="/action_page.php">
+                    
+                        <div class="row">
+                        <div class="col-50">
+                            <h3>Informações do tutor</h3>
+                            <label for="fname"><i class="fa fa-user"></i> Nome completo</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Maria da Silva">
+                            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                            <input type="text" id="email" name="email" placeholder="maria@gmail.com">
+                            <label for="adr"><i class="fa fa-address-card-o"></i> Endereço</label>
+                            <input type="text" id="adr" name="address" placeholder="Rua maria, Bairro maria, São Paulo">
+
+                            <div class="row">
+                            <div class="col-50">
+                                <label for="state">CPF</label>
+                                <input type="text" id="state" name="state" placeholder="000.000.000-00">
+                            </div>
+                            <div class="col-50">
+                                <label for="zip">Telefone</label>
+                                <input type="text" id="zip" name="zip" placeholder="11 9999-9999">
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="col-50">
+                            <h3>Informações do pet</h3>            
+                            <label for="cname">Nome do pet</label>
+                            <input type="text" id="cname" name="cardname" placeholder="Lindinha">
+                            <label for="ccnum">Tipo de animal</label>
+                            <input type="text" id="ccnum" name="cardnumber" placeholder="Cachorro">
+                            <label for="expmonth">Mês de nascimento</label>
+                            <input type="text" id="expmonth" name="expmonth" placeholder="Setembro">
+                            <div class="row">
+                            <div class="col-50">
+                                <label for="expyear">Ano de nascimento</label>
+                                <input type="text" id="expyear" name="expyear" placeholder="2018">
+                            </div>
+                            <div class="col-50">
+                                <label for="cvv">Raça</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="Pitbull">
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        <input type="submit" value="Cadastrar" class="btn">
+                    </form>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <img src="imagens/inicial/rodape.png" alt="" id="fot">
+    </footer>
+</body>

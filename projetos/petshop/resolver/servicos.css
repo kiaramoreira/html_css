@@ -1,0 +1,22 @@
+.a{
+    margin: 100px 0;
+    text-align: justify;
+    line-height: 25px;
+}
+.a>p, h1{
+    width: 60%;
+    padding: 20px;
+}
+.d{
+    float: right;
+}
+.img{
+    height: 250px;
+    margin-left: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.322);
+}
+#c{
+    float: right;
+    margin: -40px 60px -20px -20px;
+}

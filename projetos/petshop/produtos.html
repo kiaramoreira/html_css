@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="shortcut icon" href="imagens/inicial/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="produtos.css">
+
+    <style>
+        * {box-sizing: border-box}
+        body {font-family: Verdana, sans-serif; margin:0}
+        .mySlides {display: none}
+        img {vertical-align: middle;}
+        
+        .slideshow-container {
+          max-width: 70%;
+          position: relative;
+          margin: auto;
+          padding: 15px 0;
+        }
+        
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+        
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        .prev:hover, .next:hover {
+          background-color: rgba(0,0,0,0.8);
+        }
+        
+        .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active, .dot:hover {
+          background-color: #717171;
+        }
+        
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        @media only screen and (max-width: 300px) {
+          .prev, .next,.text {font-size: 11px}
+        }
+    </style>
+   
+
+</head>
+<body>
+    <header>
+        <div>
+            <a href="index.html"><img src="imagens/inicial/logo.png" id="logo"></a>
+        </div>
+        <div>
+            <input type="search" name="pesquisar" placeholder="Pesquisar" id="input">
+        </div>
+        <div>
+            <a href="#"><img src="imagens/inicial/usuario.png" class="usuario"></a>
+            <p class="usuario" id="login"><a href="login.html">Fazer login</a></p>
+        </div>
+    </header>
+    <main>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <img src="imagens/inicial/sim.png" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="imagens/produto/ft1.png" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="imagens/produto/ft2.png" style="width:100%">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+        </script>
+
+        <nav id="navv">
+            <a href="#racao" class="links">Rações</a>
+            <a href="#petiscos" class="links">Petiscos</a>
+            <a href="#brinquedos" class="links">Brinquedos</a>
+            <a href="#c" class="links">Casinhas</a>
+            <a href="#f" class="links">Farmácia</a>
+            <a href="#o" class="links">Outros</a>
+        </nav>
+
+        <div id="promocao">
+            <a href="#cao"><img src="imagens/produto/caoPromocao.png" alt="" class="promocao"></a>
+            <a href="#gato"><img src="imagens/produto/gatoPromocao.png" alt="" class="promocao"></a>
+        </div>
+
+        <section id="racao">
+            <h1><a name="racao">Rações</a></h1>
+
+            <div id="r1">
+                <div class="div">
+                  <img src="imagens/produto/r1.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Golden Salmão adulto</p>
+                  <p class="preco">R$ 44,90</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/r2.jpg" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Pedigree Carne adulto</p>
+                  <p class="preco">R$ 54,99</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/r3.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Pedigree Frango adulto</p>
+                  <p class="preco">R$ 48,90</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/r4.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Pedigree Frango junior</p>
+                  <p class="preco">R$ 40,90</p>
+                </div>
+            </div>
+            <div id="r2">
+                <div class="div">
+                  <img src="imagens/produto/r5.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Golden Salmão gatos</p>
+                  <p class="preco">R$ 30,90</p>
+                </div>
+                <div class="div">
+                  <img src="imagens/produto/r6.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Primuns Carne junior</p>
+                  <p class="preco">R$ 70,98</p>
+                </div>
+                <div class="div">
+                  <img src="imagens/produto/r7.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Golden Frango gatos</p>
+                  <p class="preco">R$ 38,90</p>
+                </div>
+                <div class="div">
+                  <img src="imagens/produto/r8.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Golden Seleção Natural</p>
+                  <p class="preco">R$ 65,90</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="racao">
+            <h1><a name="petiscos">Petiscos</a></h1>
+
+            <div id="r1">
+                <div class="div">
+                  <img src="imagens/produto/p1.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Magnus Carne gatos</p>
+                  <p class="preco">R$ 12,90</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/p2.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Magnus Frango gatos</p>
+                  <p class="preco">R$ 13,99</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/p3.png" alt="Ração golden" class="espProduto">
+                  <p class="descricao">Magnus Salmão gatos</p>
+                  <p class="preco">R$ 12,90</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/p4.png" alt="Ração golden" class="espProduto">
+                  <p class="descricao">Magnus Salmão molho</p>
+                  <p class="preco">R$ 16,99</p>
+                </div>
+            </div>
+            <div id="r2">
+                <div class="div">
+                  <img src="imagens/produto/p5.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Pestisco salmão seco</p>
+                  <p class="preco">R$ 17,90</p>
+                </div>
+                <div class="div">
+                  <img src="imagens/produto/p6.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Pedigree Carne adulto</p>
+                  <p class="preco">R$ 18,98</p>
+                </div>
+                <div class="div">
+                  <img src="imagens/produto/p7.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Pedrigree Carne junior</p>
+                  <p class="preco">R$ 20,50</p>
+                </div>
+                <div class="div">
+                  <img src="imagens/produto/p8.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Pedigree Carne molho</p>
+                  <p class="preco">R$ 22,90</p>
+                </div>
+            </div>            
+        </section>
+
+        <section id="racao">
+            <h1><a name="brinquedos">Brinquedos</a></h1>
+
+            <div id="r1">
+                <div class="div">
+                  <img src="imagens/produto/b1.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Kit cinco bolinhas</p>
+                  <p class="preco">R$ 12,99</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/b2.jpg" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Arranhador p gatos</p>
+                  <p class="preco">R$ 50,00</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/b3.jpg" alt="Ração golden" class="wProduto">
+                  <p class="descricao">Ratinhos elétricos</p>
+                  <p class="preco">R$ 10,90</p>
+                </div>
+            </div>
+            <div id="r2">
+                <div class="div">
+                  <img src="imagens/produto/b4.jpg" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Mordedor verde</p>
+                  <p class="preco">R$ 17,99</p>
+                </div>
+                <div class="div">
+                  <img src="imagens/produto/b5.jpg" alt="Ração golden" class="wProduto">
+                  <p class="descricao">Mordedor marrom</p>
+                  <p class="preco">R$ 19,98</p>
+                </div>
+                <div class="div">
+                  <img src="imagens/produto/b6.jpg" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Kit três ursinhos</p>
+                  <p class="preco">R$ 32,55</p>
+                </div>
+            </div>            
+        </section>
+
+        <section id="racao">
+            <h1><a name="c">Casinhas</a></h1>
+
+            <div id="r1">
+                <div class="div">
+                  <img src="imagens/produto/c1.jpg" alt="Ração golden" class="wwProduto">
+                  <p class="descricao">Casinha preta madeira</p>
+                  <p class="preco">R$ 192,90</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/c2.jpg" alt="Ração golden" class="espProduto" style="margin-left: 10%;">
+                  <p class="descricao">Casa vermelha peque.</p>
+                  <p class="preco">R$ 122,99</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/c3.jpg" alt="Ração golden" class="wwProduto">
+                  <p class="descricao">Casinha plástico azul</p>
+                  <p class="preco">R$ 90,99</p>
+                </div>
+            </div>
+            <div id="r2">
+                <div class="div">
+                  <img src="imagens/produto/c5.jpg" alt="Ração golden" class="wwProduto">
+                  <p class="descricao">Casinha de tecido fofo</p>
+                  <p class="preco">R$ 170,90</p>
+                </div>
+                <div class="div">
+                  <img src="imagens/produto/c6.jpg" alt="Ração golden" class="wwProduto" style="margin-bottom: 25%;">
+                  <p class="descricao">Casinha grande marrom</p>
+                  <p class="preco">R$ 180,98</p>
+                </div>
+                <div class="div">
+                  <img src="imagens/produto/c4.jfif" alt="Ração golden" class="wwProduto">
+                  <p class="descricao">Casa telhado branco</p>
+                  <p class="preco">R$ 112,50</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="racao">
+            <h1><a name="f">Farmácia</a></h1>
+
+            <div id="r1">
+                <div class="div">
+                  <img src="imagens/produto/m1.png" alt="Ração golden" class="imgProduto" style="margin-left: 8%;">
+                  <p class="descricao">Chemitril</p>
+                  <p class="preco">R$ 12,90</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/m2.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Biodex</p>
+                  <p class="preco">R$ 13,99</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/m3.png" alt="Ração golden" class="espProduto" style="height: 50%; margin: 25px 0px 25px 20px;">
+                  <p class="descricao">Simparic vermelho</p>
+                  <p class="preco">R$ 12,90</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/m4.png" alt="Ração golden" class="espProduto">
+                  <p class="descricao">Simparic verde</p>
+                  <p class="preco">R$ 16,99</p>
+                </div>
+            </div>
+            <div id="r2">
+                <div class="div">
+                  <img src="imagens/produto/m5.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Otovet</p>
+                  <p class="preco">R$ 17,90</p>
+                </div>
+                <div class="div">
+                  <img src="imagens/produto/m6.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Pró-gastro</p>
+                  <p class="preco">R$ 18,98</p>
+                </div>
+                <div class="div">
+                  <img src="imagens/produto/m7.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Pró-figado</p>
+                  <p class="preco">R$ 20,50</p>
+                </div>
+                <div class="div">
+                  <img src="imagens/produto/m8.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Antitóxico</p>
+                  <p class="preco">R$ 22,90</p>
+                </div>
+            </div>            
+        </section>
+
+        <section id="racao">
+            <h1><a name="o">Outros</a></h1>
+
+            <div id="r1">
+                <div class="div">
+                  <img src="imagens/produto/o1.jpg" alt="Ração golden" class="wwProduto" style="margin-top: 25%;">
+                  <p class="descricao">Caminha laranja fofa</p>
+                  <p class="preco">R$ 87,90</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/o2.jpg" alt="Ração golden" class="wwProduto" style="margin-top: 35%;">
+                  <p class="descricao">Pote de ração verde</p>
+                  <p class="preco">R$ 19,99</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/o3.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Kit de condicionador</p>
+                  <p class="preco">R$ 54,90</p>
+                </div>
+            </div>
+            <div id="r2">
+                <div class="div">
+                  <img src="imagens/produto/o4.jpg" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Casa com arranhador</p>
+                  <p class="preco">R$ 170,90</p>
+                </div>
+                <div class="div">
+                  <img src="imagens/produto/o5.jpg" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Casa com arranhador</p>
+                  <p class="preco">R$ 170,90</p>
+                </div>
+                <div class="div">
+                  <img src="imagens/produto/o6.jfif" alt="Ração golden" class="imgProduto" style="margin-left: 0">
+                  <p class="descricao">Kit caixinha de areia</p>
+                  <p class="preco">R$ 46,50</p>
+                </div>
+            </div>            
+        </section>
+
+        <section id="promo">
+            <h1><a name="cao">Promoções para cães</a></h1>
+
+            <div id="r1">
+                <div class="div">
+                  <img src="imagens/produto/r4.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Pedigree Frango junior</p>
+                  <p class="preco">R$ 40,90</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/p6.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Pedigree Carne adulto</p>
+                  <p class="preco">R$ 18,98</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/b1.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Kit cinco bolinhas</p>
+                  <p class="preco">R$ 12,99</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/b6.jpg" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Kit três ursinhos</p>
+                  <p class="preco">R$ 32,55</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/c4.jfif" alt="Ração golden" class="wwProduto">
+                  <p class="descricao">Casa telhado branco</p>
+                  <p class="preco">R$ 112,50</p>
+                </div>
+                
+                <div class="div">
+                  <img src="imagens/produto/o2.jpg" alt="Ração golden" class="wwProduto" style="margin-top: 35%;">
+                  <p class="descricao">Pote de ração verde</p>
+                  <p class="preco">R$ 19,99</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="promo">
+            <h1><a name="gato">Promoções para gatos</a></h1>
+
+            <div id="r1">
+                <div class="div">
+                  <img src="imagens/produto/r5.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Golden Salmão gatos</p>
+                  <p class="preco">R$ 30,90</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/p1.png" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Magnus Carne gatos</p>
+                  <p class="preco">R$ 12,90</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/p3.png" alt="Ração golden" class="espProduto">
+                  <p class="descricao">Magnus Salmão gatos</p>
+                  <p class="preco">R$ 12,90</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/b3.jpg" alt="Ração golden" class="wProduto">
+                  <p class="descricao">Ratinhos elétricos</p>
+                  <p class="preco">R$ 10,90</p>
+                </div>
+
+                <div class="div">
+                  <img src="imagens/produto/b2.jpg" alt="Ração golden" class="imgProduto">
+                  <p class="descricao">Arranhador p gatos</p>
+                  <p class="preco">R$ 50,00</p>
+                </div>
+                
+                <div class="div">
+                  <img src="imagens/produto/o6.jfif" alt="Ração golden" class="imgProduto" style="margin-left: 0">
+                  <p class="descricao">Kit caixinha de areia</p>
+                  <p class="preco">R$ 46,50</p>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+    <footer>
+        <img src="imagens/inicial/rodape.png" alt="" id="fot">
+    </footer>
+</body>
+</html>
