@@ -5,14 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundo 1</title>
     <style>
+        body{
+            background-image: url(imagem/pattern001.png);
+        }
         div.quadrado{
-            border: 1px black;
+            display: inline-block;
+            /*faz as divs ficarem uma do lado da outra*/
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: lightgray;
+            width: 200px;
+            height: 200px;
+        }
+        #q1{
+            background-color: lightblue;
+        }
+        #q2{
+            background-image: linear-gradient(to bottom, yellow, red);
+        }
+        #q3{
+            background-image: url('imagem/pattern003.png');
         }
     </style>
 </head>
 <body>
-    <dix class="quadrado"></dix>
-    <dix class="quadrado"></dix>
-    <dix class="quadrado"></dix>
+    <div class="quadrado" id="q1"></div>
+    <div class="quadrado" id="q2"></div>
+    <div class="quadrado" id="q3"></div>
 </body>
 </html>
