@@ -9,6 +9,18 @@
 
 html{
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5em;
-    line-height: 1.em;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+menu{
+    display: none;
+}
+
+article ::after{
+    content: 'Esse artigo foi impresso através do site curso em video';
+}
+
+article{
+    width: 100%;
 }
