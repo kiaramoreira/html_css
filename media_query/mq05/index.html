@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu responsivo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"/>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Menu Responsivo</h1>
+        <span id="burger" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <menu id="imenu">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    <main>
+        <article>
+            <h2>Testando Media Queries</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut fuga inventore quidem dolorum blanditiis? Tenetur illo, vel hic mollitia eveniet minima cumque velit architecto in. Facere odit nesciunt obcaecati perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae libero fuga voluptate voluptatibus perspiciatis enim, fugit neque labore ut, in quis quas quos veniam ullam est. Modi enim tempora natus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, dolorem necessitatibus exercitationem repellat vel neque culpa, possimus porro debitis ab consectetur iste suscipit ducimus quisquam natus dolorum! Est, praesentium ea!</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut fuga inventore quidem dolorum blanditiis? Tenetur illo, vel hic mollitia eveniet minima cumque velit architecto in. Facere odit nesciunt obcaecati perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae libero fuga voluptate voluptatibus perspiciatis enim, fugit neque labore ut, in quis quas quos veniam ullam est. Modi enim tempora natus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, dolorem necessitatibus exercitationem repellat vel neque culpa, possimus porro debitis ab consectetur iste suscipit ducimus quisquam natus dolorum! Est, praesentium ea!</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut fuga inventore quidem dolorum blanditiis? Tenetur illo, vel hic mollitia eveniet minima cumque velit architecto in. Facere odit nesciunt obcaecati perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae libero fuga voluptate voluptatibus perspiciatis enim, fugit neque labore ut, in quis quas quos veniam ullam est. Modi enim tempora natus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, dolorem necessitatibus exercitationem repellat vel neque culpa, possimus porro debitis ab consectetur iste suscipit ducimus quisquam natus dolorum! Est, praesentium ea!</p>
+        </article>
+    </main>
+    <script>
+        function clickMenu(){
+           if (imenu.style.display == 'block') {
+            imenu.style.display = 'none'
+           }
+           else{
+            imenu.style.display = 'block'
+           }
+        }
+    </script>
+</body>
+</html>
